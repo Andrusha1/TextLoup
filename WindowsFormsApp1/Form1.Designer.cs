@@ -32,7 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.ToLowerButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ToUpperButtion = new System.Windows.Forms.Button();
             this.SymBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.split = new System.Windows.Forms.Button();
@@ -65,16 +65,16 @@
             this.ToLowerButton.UseVisualStyleBackColor = true;
             this.ToLowerButton.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // ToUpperButtion
             // 
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(553, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "To upper";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ToUpperButtion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ToUpperButtion.Location = new System.Drawing.Point(553, 243);
+            this.ToUpperButtion.Name = "ToUpperButtion";
+            this.ToUpperButtion.Size = new System.Drawing.Size(75, 23);
+            this.ToUpperButtion.TabIndex = 2;
+            this.ToUpperButtion.Text = "To upper";
+            this.ToUpperButtion.UseVisualStyleBackColor = true;
+            this.ToUpperButtion.Click += new System.EventHandler(this.button2_Click);
             // 
             // SymBox
             // 
@@ -117,7 +117,7 @@
             this.Controls.Add(this.split);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SymBox);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ToUpperButtion);
             this.Controls.Add(this.ToLowerButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -138,7 +138,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button ToLowerButton;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ToUpperButtion;
         private System.Windows.Forms.TextBox SymBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button split;

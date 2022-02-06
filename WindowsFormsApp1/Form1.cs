@@ -22,65 +22,83 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e) //ToLower Buttion
         {
-            textBox2.Clear();
-            string bfrstring = textBox1.Text;
-            string aftstring = bfrstring.ToLower();
-            //aftstring = aftstring.Replace('\n', ' '); 
-            aftstring = aftstring.Replace(Environment.NewLine, " "); //remove newlines
-
-            if (SymBox.Text.Length >= 1) //Change specific symbol
+            if (textBox1.Text != "")
             {
-                string x = SymBox.Text;
-                aftstring = aftstring.Replace($"{x}", "♥");
-            }
-            aftstring = aftstring.Replace('\n', ' ');
-            aftstring = aftstring.Replace("♥", "\n♥"); //create new line on hearth symbol
-            textBox2.AppendText(aftstring);
+                textBox2.Clear();
+                string bfrstring = textBox1.Text;
+                string aftstring = bfrstring.ToLower();
+                //aftstring = aftstring.Replace('\n', ' '); 
+                aftstring = aftstring.Replace(Environment.NewLine, " "); //remove newlines
 
+                if (SymBox.Text.Length >= 1) //Change specific symbol
+                {
+                    string x = SymBox.Text;
+                    aftstring = aftstring.Replace($"{x}", "♥");
+                }
+                aftstring = aftstring.Replace('\n', ' ');
+                aftstring = aftstring.Replace("♥", "\n♥"); //create new line on hearth symbol
+                textBox2.AppendText(aftstring);
+            }
+            else
+            {
+                textBox2.Clear();
+                textBox2.AppendText("Paste the text");
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //ToUpper Buttion
         {
-            textBox2.Clear();
-            string bfrstring = textBox1.Text;
-            string aftstring = bfrstring.ToUpper(); 
-
-            aftstring = aftstring.Replace(Environment.NewLine, " "); //remove newlines
-
-            if (SymBox.Text.Length >= 1) //Change specific symbol
+            if (textBox1.Text != "")
             {
-                string x = SymBox.Text;
-                aftstring = aftstring.Replace($"{x}", "♥");
-            }
-            aftstring = aftstring.Replace('\n', ' ');
-            aftstring = aftstring.Replace("♥", "\n♥"); //create new line on hearth symbol
-            textBox2.AppendText(aftstring);
-        }
+                textBox2.Clear();
+                string bfrstring = textBox1.Text;
+                string aftstring = bfrstring.ToUpper();
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
+                aftstring = aftstring.Replace(Environment.NewLine, " "); //remove newlines
+
+                if (SymBox.Text.Length >= 1) //Change specific symbol
+                {
+                    string x = SymBox.Text;
+                    aftstring = aftstring.Replace($"{x}", "♥");
+                }
+                aftstring = aftstring.Replace('\n', ' ');
+                aftstring = aftstring.Replace("♥", "\n♥"); //create new line on hearth symbol
+                textBox2.AppendText(aftstring);
+            }
+            else
+            {
+                textBox2.Clear();
+                textBox2.AppendText("Paste the text");
+            }
         }
 
         private void split_Click(object sender, EventArgs e)
         {
-            textBox2.Clear();
-            string splstr = textBox1.Text;
-
-            splstr = splstr.Replace(Environment.NewLine, " "); //remove newlines
-
-            if (SymBox.Text.Length >= 1) //Change specific symbol
+            if (textBox1.Text != "")
             {
-                string x = SymBox.Text;
-                splstr = splstr.Replace($"{x}", "♥");
+                textBox2.Clear();
+                string splstr = textBox1.Text;
+
+                splstr = splstr.Replace(Environment.NewLine, " "); //remove newlines
+
+                if (SymBox.Text.Length >= 1) //Change specific symbol
+                {
+                    string x = SymBox.Text;
+                    splstr = splstr.Replace($"{x}", "♥");
+                }
+               splstr = splstr.Replace("♥", "\n♥"); //create new line on hearth symbol
+                if (splstr.Substring(0, 1) == "\n") //remove new line, if first symbol is heart
+                    splstr = splstr.Substring(1, splstr.Length - 1);
+                splstr = splstr.Replace("	", " ");
+                textBox2.AppendText(splstr);
             }
-            splstr = splstr.Replace("♥", "\n♥"); //create new line on hearth symbol
-            if (splstr.Substring(0, 1) == "\n") //remove new line, if first symbol is heart
-                splstr = splstr.Substring(1, splstr.Length - 1);
-            splstr = splstr.Replace("	", " ");
-            textBox2.AppendText(splstr);
+            else
+            {
+                textBox2.Clear();
+                textBox2.AppendText("Paste the text");
+            }
         } 
     }
 }
